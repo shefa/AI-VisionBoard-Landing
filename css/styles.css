@@ -144,7 +144,6 @@
     transform: translateY(-50%);
 }
 
-
 .background-kur {
   position: absolute;
   z-index: 2;
@@ -167,13 +166,71 @@ video {
   height: 100%;
 }
 
-.SeeYourDreamsComeToLife {
+/* .SeeYourDreamsComeToLife {
   width: 226px; 
   height: 105px; 
   color: white; 
   font-size: 24px;
   font-weight: 500; 
   word-wrap: break-word;
+} */
+
+.see-your-dreams-container {
+  font-size: 16px;
+  color: white;
+  display:flex;
+
+}
+
+.create-your-world-now-container {
+  font-size:111px;
+}
+
+.create-your-world-h1 {
+  font-size: 111px;
+  color: white;
+  font-size: calc(1.625rem + 4.5vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.now-h1 {
+  color: #1CE3E5;
+}
+
+/* .col-lg-6:first-child { 
+  width:55%;
+}
+
+.col-lg-6:last-child {
+  width:45%;
+} */
+
+@media (min-width: 1200px) { 
+  .see-your-dreams-title {
+    width: 30%;
+    font-size:24px;
+  }
+  .col-lg-6:first-child { 
+    width:55%;
+  }
+  
+  .col-lg-6:last-child {
+    width:45%;
+  }
+}
+
+.see-your-dreams-title {
+  font-size:24px;
+}
+
+.see-your-dreams-ul {
+  line-height: 30px;
+  text-align: left;
+  margin: 0;
+  font-size: 16px;
+  list-style-type: none;
+  list-style-image: url("../assets/check.svg");
 }
 
 body {
@@ -618,16 +675,7 @@ progress {
   font-weight: 300;
 }
 
-.display-1 {
-  font-size: calc(1.625rem + 4.5vw);
-  font-weight: 300;
-  line-height: 1.2;
-}
-
 @media (min-width: 1200px) {
-  .display-1 {
-    font-size: 5rem;
-  }
 }
 
 .display-2 {
@@ -2330,6 +2378,10 @@ progress {
 
   body {
     max-height: 844px;
+  }
+
+  .see-your-dreams-container {
+    flex-direction: column;
   }
 }
 
