@@ -80,6 +80,26 @@
   --bs-highlight-bg: #fff3cd;
 }
 
+#send-feedback {
+  padding:12px;
+  border-radius: 72px;
+  border: 0.925px solid rgba(28, 227, 229, 0.60);
+
+  background: rgba(4, 10, 16, 0.40);
+
+  backdrop-filter: blur(12.95000171661377px);
+
+  color: white;
+
+  text-align: center; 
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24.975px;
+  /* 138.75% */
+  letter-spacing: 0.72px;
+}
+
 *,
 *::before,
 *::after {
@@ -2264,6 +2284,10 @@ progress {
   .table-responsive-sm {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    max-height: 844px;
   }
 }
 
