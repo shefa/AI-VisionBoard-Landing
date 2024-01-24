@@ -95,6 +95,8 @@
 .top-elipse {
   display: block;
   position: absolute;
+  z-index:3;
+  left: 200px;
 }
 
 .video-overlay {
