@@ -2448,6 +2448,14 @@ progress {
   color: #6c757d;
 }
 
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover, 
+.form-control:-webkit-autofill:focus, 
+.form-control:-webkit-autofill:active {
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -2461,11 +2469,12 @@ progress {
   border: 1px solid #ced4da;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-text-fill-color: #fff;
   appearance: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-radius: 84px;
   border: 1px solid rgba(255, 255, 255, 0.17);
-  background: linear-gradient(106deg, rgba(255, 255, 255, 0.11) 29.2%, rgba(252, 252, 252, 0.11) 67.57%);
+  background: linear-gradient(106deg, rgba(255, 255, 255, 0.11) 29.2%, rgba(252, 252, 252, 0.11) 67.57%) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13114,11 +13123,19 @@ footer a:focus {
   }
 
   .phone-mockup-thing {
-    padding-bottom: 2rem !important;
+    padding-bottom: 1.7rem !important;
   }
 
   .create-your-world-now-container {
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.7rem !important;
+  }
+
+  .masthead {
+    padding-top: 6.6rem;
+  }
+
+  .see-your-dreams-ul {
+    line-height: 24px;
   }
 }
 
