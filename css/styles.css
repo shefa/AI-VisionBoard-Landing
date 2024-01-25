@@ -100,6 +100,12 @@
   letter-spacing: 0.72px;
 }
 
+#hamburger-btn { 
+  border: none;
+  font-size: 30px ;
+  color: rgba(28, 227, 229, 0.60) ;
+}
+
 *,
 *::before,
 *::after {
@@ -166,15 +172,6 @@ video {
   height: 100%;
 }
 
-/* .SeeYourDreamsComeToLife {
-  width: 226px; 
-  height: 105px; 
-  color: white; 
-  font-size: 24px;
-  font-weight: 500; 
-  word-wrap: break-word;
-} */
-
 .see-your-dreams-container {
   font-size: 16px;
   color: white;
@@ -197,14 +194,6 @@ video {
 .now-h1 {
   color: #1CE3E5;
 }
-
-/* .col-lg-6:first-child { 
-  width:55%;
-}
-
-.col-lg-6:last-child {
-  width:45%;
-} */
 
 @media (min-width: 1200px) { 
   .see-your-dreams-title {
@@ -229,6 +218,14 @@ video {
 .see-your-dreams-title {
   font-size:20px;
   padding: 0 0.77em 0.77em 0;
+}
+
+@media (max-width: 575.98px) { 
+  .see-your-dreams-title {
+    padding-bottom: 30px;
+    padding-top: 15px;
+    font-size:24px;
+  }
 }
 
 .see-your-dreams-ul {
@@ -4512,9 +4509,9 @@ fieldset:disabled .btn {
 
 .navbar-toggler {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
-  font-size: var(--bs-navbar-toggler-font-size);
+  /* font-size: var(--bs-navbar-toggler-font-size); */
   line-height: 1;
-  color: var(--bs-navbar-color);
+  /* color: var(--bs-navbar-color); */
   background-color: transparent;
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
@@ -12807,9 +12804,7 @@ section {
 }
 
 #mainNav .navbar-toggler {
-  font-size: 0.875rem;
   padding: 0.75rem 1rem;
-  color: #212529;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
