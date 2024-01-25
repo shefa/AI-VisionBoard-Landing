@@ -13112,6 +13112,14 @@ footer a:focus {
   .not-on-mobile {
     display: none;
   }
+
+  .phone-mockup-thing {
+    padding-bottom: 2rem !important;
+  }
+
+  .create-your-world-now-container {
+    margin-bottom: 2rem !important;
+  }
 }
 
 @media (min-width: 576px) {
