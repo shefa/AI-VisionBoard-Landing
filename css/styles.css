@@ -220,8 +220,15 @@ video {
   }
 }
 
+@media (max-width: 575.98px){
+  .see-your-dreams-title {
+    display: none;
+  }
+}
+
 .see-your-dreams-title {
   font-size:20px;
+  padding: 0 0.77em 0.77em 0;
 }
 
 .see-your-dreams-ul {
