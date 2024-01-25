@@ -5,7 +5,7 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -16,19 +16,26 @@ window.addEventListener('DOMContentLoaded', event => {
             target: '#mainNav',
             offset: 74,
         });
+        window.addEventListener('scroll', event => {
+            if(window.scrollY>60){
+                mainNav.classList.add('navbar-scrolled');
+            } else if (window.scrollY < 60) {
+                mainNav.classList.remove('navbar-scrolled');
+            }
+        });
     };
 
     // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
+    // const navbarToggler = document.body.querySelector('.navbar-toggler');
+    // const responsiveNavItems = [].slice.call(
+    //     document.querySelectorAll('#navbarResponsive .nav-link')
+    // );
+    // responsiveNavItems.map(function (responsiveNavItem) {
+    //     responsiveNavItem.addEventListener('click', () => {
+    //         if (window.getComputedStyle(navbarToggler).display !== 'none') {
+    //             navbarToggler.click();
+    //         }
+    //     });
+    // });
 
 });
