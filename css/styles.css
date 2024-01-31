@@ -152,7 +152,7 @@
 
 .background-kur {
   position: absolute;
-  z-index: 2;
+  z-index: -2;
   width: 100%;
   height: 100%;
 }
@@ -4457,9 +4457,12 @@ fieldset:disabled .btn {
 }
 
 .navbar-scrolled {
-    background: rgb(77, 77, 77); /* IE */
+    background: rgb(11,11,11); /* IE */
     background: rgba(0, 0, 0, 0.77); /* NON-IE */
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
     box-shadow: 0px 3px 10px 0.25rem var(--bs-navbar-hover-color);
+
 }
 
 .navbar>.container,
@@ -9254,7 +9257,7 @@ fieldset:disabled .btn {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: #ffffff !important;
 }
 
 .text-black-50 {
@@ -12815,10 +12818,10 @@ section {
   height: 3rem;
 }
 
-#mainNav {
+/*#mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
+}*/
 
 #mainNav .navbar-brand {
   font-family: var(--bs-body-font-family);
@@ -13019,7 +13022,7 @@ section.cta:before {
 
   .features-device-mockup .device-wrapper {
     max-width: 15rem;
-    margin-left: auto;
+    /*margin-left: auto;*/
   }
 }
 
@@ -13066,6 +13069,7 @@ footer a:focus {
   /*z-index: 2;*/
   background: transparent;
   padding-top: 7.7rem;
+  min-height: 100vh;
   /*padding-bottom: 5rem;*/
 }
 
@@ -13202,4 +13206,27 @@ footer a:focus {
 #join-waitlist img{
   height: 2.5em;
   width: 2.5em;
+}
+
+
+.gradient-thing {
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(0deg, rgba(0,0,0,0.77) 0%, rgba(0,0,0,0.77) 11%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
+
+.gradient-thing-reversed {
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.33) 33%, rgba(0,0,0,0.33) 77%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.33) 33%, rgba(0,0,0,0.33) 77%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.77) 0%, rgba(0,0,0,0.33) 33%, rgba(0,0,0,0.33) 77%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
+
+.77black {
+
 }
