@@ -192,7 +192,61 @@ video {
   line-height: 1.2;
 }
 
-.now-h1 {
+#h1-create {
+  opacity: 0;
+}
+
+#h1-your {
+  opacity: 0;
+}
+
+#h1-world {
+  opacity: 0;
+}
+
+#h1-now {
+  color: #1CE3E5;
+  opacity: 0;
+}
+
+#h1-create{
+  -webkit-animation: 2s ease 0s normal forwards 1 fadein;
+  animation: 2s ease 0s normal forwards 1 fadein;
+}
+
+#h1-your{
+  -webkit-animation: 2s ease 0.5s normal forwards 1 fadein;
+  animation: 2s ease 0.5s normal forwards 1 fadein;
+}
+
+#h1-world{
+  -webkit-animation: 2s ease 1s normal forwards 1 fadein;
+  animation: 2s ease 1s normal forwards 1 fadein;
+}
+
+#h1-now{
+  -webkit-animation: 3s ease 1.5s normal forwards 1 fadein;
+  animation: 3s ease 1.5s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+  0% { opacity:0; filter:blur(100px);}
+  20% {opacity: 0.2; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+  0% { opacity:0; }
+  20% {opacity: 0.2; }
+  100% { opacity:1; }
+}
+
+/* #h1-create {
+  transition-delay:250ms;
+  transition-property: margin;
+} */
+
+.h1-now {
   color: #1CE3E5;
 }
 
@@ -12800,6 +12854,7 @@ html {
 .font-alt {
   font-family: var(--bs-body-font-family);
 }
+
 
 .text-gradient {
   background: -webkit-linear-gradient(#2937f0, #9f1ae2);
