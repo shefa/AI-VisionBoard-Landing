@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.shefa.aivisionboarddemo",
+      "sha256_cert_fingerprints": [
+        "9C:34:95:B4:27:85:67:3E:DA:D2:42:3E:64:02:17:8B:2F:C5:8E:48:FC:8B:B0:62:2A:A0:81:DE:2C:37:E5:AA"
+      ]
+    }
+  }
+]
