@@ -23,6 +23,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     });
 
+    // Get references to the video elements
+    const video1 = document.getElementById("fade");
+    const video2 = document.getElementById("demo-screen");
+
+    // Function to play both videos simultaneously
+    function playVideos() {
+      video1.play();
+      video2.play();
+    }
+
+    window.addEventListener("load", playVideos);
+
     // lazy loading for images with class "lazy"
     // var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
