@@ -96,7 +96,6 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24.975px;
-  /* 138.75% */
   letter-spacing: 0.72px;
 }
 
@@ -117,17 +116,6 @@
     scroll-behavior: smooth;
   }
 }
-
-/*.top-elipse {
-  display: block;
-  position: absolute;
-  z-index:4;
-  background-image: url("assets/gradients/top-elipse.png");
-  background-size: cover;
-  background-position: center;
-  height: 10em; 
-  width: 10em;
-}*/
 
 .top-elipse {
     width: 100%;
@@ -240,11 +228,6 @@ video {
   20% {opacity: 0.2; }
   100% { opacity:1; }
 }
-
-/* #h1-create {
-  transition-delay:250ms;
-  transition-property: margin;
-} */
 
 .h1-now {
   color: #1CE3E5;
@@ -687,14 +670,6 @@ legend+* {
   -webkit-appearance: textfield;
 }
 
-/* rtl:raw:
-[type="tel"],
-[type="url"],
-[type="email"],
-[type="number"] {
-  direction: ltr;
-}
-*/
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -2438,10 +2413,6 @@ progress {
   body {
     max-height: 844px;
   }
-
-  .see-your-dreams-container {
-    /*flex-direction: column;*/
-  }
 }
 
 @media (max-width: 767.98px) {
@@ -2546,8 +2517,6 @@ progress {
 }
 
 .form-control:focus {
-  /*color: #212529;*/
-  /*background-color: #fff;*/
   border-color: rgb(28, 227, 229);
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(28, 227, 229, 0.25);
@@ -3168,14 +3137,6 @@ textarea.form-control-lg {
 .input-group-sm>.form-select {
   padding-right: 3rem;
 }
-
-/* .input-group:not(.has-validation)> :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
-.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
-.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
-.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-} */
 
 .input-group.has-validation> :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 .input-group.has-validation>.dropdown-toggle:nth-last-child(n+4),
@@ -4592,9 +4553,7 @@ fieldset:disabled .btn {
 
 .navbar-toggler {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
-  /* font-size: var(--bs-navbar-toggler-font-size); */
   line-height: 1;
-  /* color: var(--bs-navbar-color); */
   background-color: transparent;
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
@@ -5364,7 +5323,6 @@ fieldset:disabled .btn {
   padding-right: var(--bs-breadcrumb-item-padding-x);
   color: var(--bs-breadcrumb-divider-color);
   content: var(--bs-breadcrumb-divider, "/")
-    /* rtl: var(--bs-breadcrumb-divider, "/") */
   ;
 }
 
@@ -6330,7 +6288,6 @@ fieldset:disabled .btn {
   align-items: center;
   justify-content: center;
   padding: var(--bs-modal-header-padding);
-  /*border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);*/
   border-top-left-radius: var(--bs-modal-inner-border-radius);
   border-top-right-radius: var(--bs-modal-inner-border-radius);
 }
@@ -12847,10 +12804,6 @@ html {
   background-color: #000 !important;
 }
 
-.bg-gradient-primary-to-secondary {
-  /*background: linear-gradient(45deg, #2937f0, #9f1ae2) !important;*/
-}
-
 .font-alt {
   font-family: var(--bs-body-font-family);
 }
@@ -12872,11 +12825,6 @@ section {
 .app-badge {
   height: 3rem;
 }
-
-/*#mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}*/
 
 #mainNav .navbar-brand {
   font-family: var(--bs-body-font-family);
@@ -13077,7 +13025,6 @@ section.cta:before {
 
   .features-device-mockup .device-wrapper {
     max-width: 15rem;
-    /*margin-left: auto;*/
   }
 }
 
@@ -13121,11 +13068,9 @@ footer a:focus {
 }
 
 .masthead {
-  /*z-index: 2;*/
   background: transparent;
   padding-top: 7.7rem;
   min-height: 100vh;
-  /*padding-bottom: 5rem;*/
 }
 
 .masthead * {
@@ -13234,7 +13179,6 @@ footer a:focus {
   font-style: normal;
   font-weight: 500;
   line-height: 24.975px;
-  /* 138.75% */
   letter-spacing: 0.72px;
 
   display: inline-flex;
@@ -13254,7 +13198,7 @@ footer a:focus {
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
-  line-height: 34.552px; /* 157.054% */
+  line-height: 34.552px;
   letter-spacing: -0.66px;
 }
 
