@@ -12862,6 +12862,11 @@ section {
   width: 100%;
 }
 
+.device-image {
+  width:100%;
+  height: 100%;
+}
+
 .device {
   position: relative;
   background-size: cover;
@@ -13223,11 +13228,6 @@ footer a:focus {
   background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.33) 33%, rgba(0,0,0,0.33) 77%, rgba(0,0,0,0) 100%);
   background: linear-gradient(180deg, rgba(0,0,0,0.77) 0%, rgba(0,0,0,0.33) 33%, rgba(0,0,0,0.33) 77%, rgba(0,0,0,0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
-}
-
-
-.77black {
-
 }
 
 
