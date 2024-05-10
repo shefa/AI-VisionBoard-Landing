@@ -181,23 +181,23 @@ video {
 }
 
 #h1-create {
-  opacity: 0;
+  opacity: 1;
 }
 
 #h1-your {
-  opacity: 0;
+  opacity: 1;
 }
 
 #h1-world {
-  opacity: 0;
+  opacity: 1;
 }
 
 #h1-now {
   color: #1CE3E5;
-  opacity: 0;
+  opacity: 1;
 }
 
-#h1-create{
+/* #h1-create{
   -webkit-animation: 2s ease 0s normal forwards 1 fadein;
   animation: 2s ease 0s normal forwards 1 fadein;
 }
@@ -215,7 +215,7 @@ video {
 #h1-now{
   -webkit-animation: 3s ease 1.5s normal forwards 1 fadein;
   animation: 3s ease 1.5s normal forwards 1 fadein;
-}
+} */
 
 @keyframes fadein{
   0% { opacity:0; filter:blur(100px);}
