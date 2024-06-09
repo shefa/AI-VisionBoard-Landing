@@ -3785,8 +3785,15 @@ fieldset:disabled .btn {
   --bs-btn-border-radius: 0.25rem;
 }
 
-.fade {
-  transition: opacity 0.15s linear;
+.fadezzz {
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  position:fixed;
+  /*transition: opacity 0.15s linear;*/
+}
+
+.fadezzz.active {
+    opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12823,7 +12830,7 @@ section {
 }
 
 .app-badge {
-  height: 3rem;
+  height: 3.3rem;
 }
 
 #mainNav .navbar-brand {
