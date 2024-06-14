@@ -34,6 +34,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
 
       // Schedule the first transition
+      preloadNextVideo();
       setTimeout(playNextVideo, 8000);  // 8 seconds for the next video
     }
 
@@ -43,7 +44,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("fade"),
         document.getElementById("fade2")
     ];
-    const videoSources = ["assets/background/0.mp4", "assets/background/1.mp4", "assets/background/2.mp4", "assets/background/3.mp4"];
+    const videoSources = [
+        "assets/background/0.mp4",
+        "assets/background/1.mp4",
+        "assets/background/2.mp4",
+        "assets/background/3.mp4"
+    ];
     let currentVideoIndex = 0;
     let currentVideoElement = videoElements[0];
     let nextVideoElement = videoElements[1];
@@ -66,6 +72,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
         // Schedule the next transition
         setTimeout(playNextVideo, 8000);  // Schedule the next video change after 8 seconds
+    }
+
+    function preloadNextVideo() {
+        const preloadIndex = (currentVideoIndex + 1) % videoSources.length;
+        const preloadVideoElement = new Image();
+        preloadVideoElement.src = videoSources[preloadIndex];
     }
 
     // Start the first video
