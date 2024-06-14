@@ -29,13 +29,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Function to play both videos simultaneously
     function playVideos() {
-      video1.play();
+      //video1.play();
       video2.play();
-      currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
 
-      // Schedule the first transition
-      preloadNextVideo();
-      setTimeout(playNextVideo, 8000);  // 8 seconds for the next video
+      playNextVideo();
     }
 
     window.addEventListener("load", playVideos);
@@ -53,26 +50,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     let currentVideoIndex = 0;
     let currentVideoElement = videoElements[0];
     let nextVideoElement = videoElements[1];
-    
-    function playNextVideo() {
-        // console.log('gluposti');
-        // console.log(currentVideoIndex);
-        nextVideoElement.src = videoSources[currentVideoIndex];
-        nextVideoElement.load();
-        nextVideoElement.play();
-
-        // Cross-fade between current and next video
-        nextVideoElement.classList.add("active");
-        currentVideoElement.classList.remove("active");
-
-        // Switch references for the next iteration
-        [currentVideoElement, nextVideoElement] = [nextVideoElement, currentVideoElement];
-
-        currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
-
-        // Schedule the next transition
-        setTimeout(playNextVideo, 8000);  // Schedule the next video change after 8 seconds
-    }
 
     function preloadNextVideo() {
         const preloadIndex = (currentVideoIndex + 1) % videoSources.length;
@@ -80,7 +57,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
         preloadVideoElement.src = videoSources[preloadIndex];
     }
 
-    // Start the first video
-    
+    function playVideoForwardReverse(videoElement, source) {
+      videoElement.src = source;
+      videoElement.load();
+      videoElement.play();
+      videoElement.onended = () => { reverseVideo(videoElement); };
+    }
+
+    function reverseVideo(videoElement) {
+      videoElement.pause();
+      const reverseInterval = setInterval(() => {
+        // Decrement currentTime to move backwards (approximately 30 fps)
+        if (videoElement.currentTime > 0) videoElement.currentTime -= 0.033;
+        else clearInterval(reverseInterval);
+      }, 33); // Repeat every 33 milliseconds (approximately 30 fps)
+    }
+
+    function playNextVideo() {
+      playVideoForwardReverse(nextVideoElement, videoSources[currentVideoIndex]);
+      nextVideoElement.classList.add("active");
+      currentVideoElement.classList.remove("active");
+      [currentVideoElement, nextVideoElement] = [nextVideoElement, currentVideoElement];
+      currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+      preloadNextVideo();
+      setTimeout(playNextVideo, 8000);  // Schedule next video change
+    }
+
   }
 });
