@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data from Parameter</title>
+</head>
+<body>
+    <pre id="content">
+        <!-- This will be replaced by the data parameter -->
+        Loading...
+    </pre>
+
+    <script>
+        // Function to display data from URL parameter
+        function displayDataFromURL() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const dataParam = urlParams.get('data');
+
+            if (dataParam) {
+                document.getElementById('content').textContent = dataParam;
+            } else {
+                document.getElementById('content').textContent = 'No data parameter provided';
+            }
+        }
+
+        // Call the function to display data on page load
+        displayDataFromURL();
+    </script>
+</body>
+</html>
