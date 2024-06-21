@@ -25,12 +25,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Get references to the video elements
     const video1 = document.getElementById("fade");
-    const video2 = document.getElementById("demo-screen");
 
     // Function to play both videos simultaneously
     function playVideos() {
       //video1.play();
-      video2.play();
+      //video2.play();
 
       playNextVideo();
     }
@@ -41,6 +40,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("fade"),
         document.getElementById("fade2")
     ];
+    const demoElements = [
+        document.getElementById("demo-screen1"),
+        document.getElementById("demo-screen2")
+    ];
+
     const videoSources = [
         "assets/background/0.mp4",
         "assets/background/1.mp4",
@@ -48,8 +52,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
         "assets/background/3.mp4"
     ];
     let currentVideoIndex = 0;
+
+    const screenshotSources = [
+        "assets/visionboard_screenshots/screenshot_visionboard_long1.png",
+        "assets/visionboard_screenshots/screenshot_visionboard_long2.png",
+        "assets/visionboard_screenshots/screenshot_visionboard_long3.png",
+        "assets/visionboard_screenshots/screenshot_visionboard_long4.png"
+    ];
+    let currentScreenshotIndex = 0;
+
     let currentVideoElement = videoElements[0];
     let nextVideoElement = videoElements[1];
+
+    let currentDemoScreenshot = demoElements[0];
+    let nextDemoScreenshot = demoElements[1];
 
     function preloadNextVideo() {
         const preloadIndex = (currentVideoIndex + 1) % videoSources.length;
@@ -73,12 +89,28 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }, 33); // Repeat every 33 milliseconds (approximately 30 fps)
     }
 
+    function swapToNextImage() {
+      nextDemoScreenshot.src = screenshotSources[currentScreenshotIndex];
+
+      const anim = nextDemoScreenshot.style.animation;
+      nextDemoScreenshot.style.animation = "none";
+      void nextDemoScreenshot.offsetWidth;
+      nextDemoScreenshot.style.animation = anim;
+
+      nextDemoScreenshot.classList.add("active");
+      currentDemoScreenshot.classList.remove("active");
+      [currentDemoScreenshot, nextDemoScreenshot] = [nextDemoScreenshot, currentDemoScreenshot];
+      currentScreenshotIndex = (currentScreenshotIndex + 1) % screenshotSources.length;
+    }
+
     function playNextVideo() {
+      swapToNextImage();
       playVideoForwardReverse(nextVideoElement, videoSources[currentVideoIndex]);
       nextVideoElement.classList.add("active");
       currentVideoElement.classList.remove("active");
       [currentVideoElement, nextVideoElement] = [nextVideoElement, currentVideoElement];
       currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+      
       preloadNextVideo();
       setTimeout(playNextVideo, 8000);  // Schedule next video change
     }

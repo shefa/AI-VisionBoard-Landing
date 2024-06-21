@@ -106,10 +106,9 @@
           <div class="masthead-device-mockup">
             <div class="device-wrapper">
               <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-                <div class="screen bg-black">
-                  <video loop muted playsinline defaultmuted preload="auto" style="max-width: 100%; height: 100%;" id="demo-screen" poster="assets/demo-screen-preload.webp">
-                    <source src="assets/img/demo-screen3.webm" type="video/webm" />
-                  </video>
+                <div class="screen bg-black animated-vertical">
+                  <img class="device-image fadezzz active" id="demo-screen1" decoding="async" src="assets/demo-screen-preload.webp">
+                  <img class="device-image fadezzz" id="demo-screen2" decoding="async" src="assets\visionboard_screenshots\screenshot_visionboard_long2.png">
                 </div>
               </div>
             </div>
@@ -209,7 +208,9 @@
                             <div class="device-wrapper">
                                 <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
                                     <div class="screen bg-black">
-                                        <img class="device-image" loading="lazy" decoding="async" src="assets/screenshots/4.webp" alt="Collage of a person presented in different jobs">
+                                        <video loop muted playsinline defaultmuted autoplay preload="auto" style="max-width: 100%; height: 100%;" poster="assets/demo-screen-preload.webp">
+                                          <source src="assets/demo_bali_rice_fields.mp4" type="video/mp4" />
+                                        </video>
                                     </div>
                                 </div>
                             </div>
@@ -233,6 +234,7 @@
                         <!-- Features section device mockup-->
                         <div class="features-device-mockup d-flex justify-content-lg-start justify-content-xs-center">
                             <div class="device-wrapper">
+                                <img class="user-badge" loading="lazy" decoding="async" src="assets/img/az.png" alt="User Badge">
                                 <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
                                     <div class="screen bg-black">
                                         <img class="device-image" loading="lazy" decoding="async" src="assets/screenshots/1.webp" alt="Astronaut">
