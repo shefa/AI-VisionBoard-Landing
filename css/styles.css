@@ -12995,7 +12995,7 @@ section.cta:before {
 }
 
 .features-device-mockup .device-wrapper {
-  max-width: 10rem;
+  max-width: 12.5rem;
 }
 
 @media (min-width: 576px) {
@@ -13100,14 +13100,14 @@ footer a:focus {
 
 
 .masthead .masthead-device-mockup .device-wrapper {
-  max-width: 10rem;
+  max-width: 12.5rem;
 }
 
-@media (min-width: 576px) {
+/*@media (min-width: 576px) {
   .masthead .masthead-device-mockup .device-wrapper {
     max-width: 12.5rem;
   }
-}
+}*/
 
 @media (min-width: 768px) {
   .masthead .masthead-device-mockup .device-wrapper {

@@ -45,6 +45,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("demo-screen2")
     ];
 
+    const demoElements2 = [
+        document.getElementById("demo-screen3"),
+        document.getElementById("demo-screen4")
+    ];
+
+    const demoElements3 = [
+      document.getElementById("userAz"),
+      document.getElementById("userLena")
+    ];
+
+
     const videoSources = [
         "assets/background/0.mp4",
         "assets/background/1.mp4",
@@ -103,8 +114,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
       currentScreenshotIndex = (currentScreenshotIndex + 1) % screenshotSources.length;
     }
 
+    function swapLenaAz() {
+      for (var i=0;i<demoElements2.length;i++){
+        if (!demoElements2[i].classList.contains('active')){
+          const anim = demoElements2[i].style.animation;
+          demoElements2[i].style.animation = "none";
+          void demoElements2[i].offsetWidth;
+          demoElements2[i].style.animation = anim;
+        }
+        demoElements2[i].classList.toggle('active');
+        demoElements3[i].classList.toggle('active');
+      }
+    }
+
     function playNextVideo() {
       swapToNextImage();
+      swapLenaAz();
+
       playVideoForwardReverse(nextVideoElement, videoSources[currentVideoIndex]);
       nextVideoElement.classList.add("active");
       currentVideoElement.classList.remove("active");
