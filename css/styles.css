@@ -13161,7 +13161,7 @@ footer a:focus {
   }
 
   .masthead {
-    padding-top: 6.6rem;
+    padding-top: 6rem;
   }
 
   .see-your-dreams-ul {
@@ -13452,11 +13452,15 @@ a {
 .arrow-wrapper{
   position: absolute;
   display: flex;
-  inset: 0;
+  inset: auto;
+  bottom: 0;
+  right: 0;
   padding: 40px;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  z-index: 4;
+  padding-right: 5rem;
 }
 
 .arrow{
@@ -13464,7 +13468,7 @@ a {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  z-index: 3;
+  z-index: 5;
 }
 
 .arrow-pulse{
@@ -13481,5 +13485,12 @@ a {
   100% {
     opacity: 100%;
     scale: 100%;
+  }
+}
+
+
+@media (max-width: 700px){
+  .arrow-wrapper {
+    padding-right: 1rem;
   }
 }

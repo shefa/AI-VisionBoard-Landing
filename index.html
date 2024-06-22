@@ -21,15 +21,24 @@
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6XBMNGPK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q6XBMNGPK0');
+  </script>
 </head>
 
 <body id="page-top">
   <div class="background-kur">
-    <video loop muted playsinline defaultmuted preload="auto" class="fadezzz active" id="fade" poster="assets/fade-preload.webp">
-      <source src="assets/background/experiment/0.mp4" type="video/mp4">
+    <video loop muted playsinline defaultmuted preload="auto" class="fadezzz" id="fade" poster="assets/fade-preload.webp">
+      <source src="assets/background/0.mp4" type="video/mp4">
     </video>
-    <video loop muted playsinline defaultmuted preload="auto" class="fadezzz" id="fade2" poster="assets/fade-preload.webp">
-      <source src="assets/background/experiment/0.mp4" type="video/mp4">
+    <video loop muted playsinline defaultmuted preload="auto" class="fadezzz active" id="fade2" poster="assets/fade-preload.webp">
+      <source src="assets/background/0.mp4" type="video/mp4">
     </video>
     <div class="video-overlay"></div>
     <div class="top-elipse"></div>
@@ -58,8 +67,8 @@
     </div>
   </nav>
 
-  <div class="arrow-wrapper">
-    <div class="arrow">
+  <div id="arrowscroll" class="arrow-wrapper fadezzz active">
+    <div class="arrow d-flex float-right">
       <svg xmlns="http://www.w3.org/2000/svg" class="arrow-pulse" width="1em" height="1em" viewBox="0 0 25 25">
         <path fill="#DADADA" d="M4.97 13.22a.75.75 0 0 1 1.06 0L11 18.19V3.75a.75.75 0 0 1 1.5 0v14.44l4.97-4.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path>
       </svg>
@@ -100,7 +109,8 @@
 
               <div class="d-flex flex-column flex-lg-row align-items-center">
                   <a class="me-lg-3 mb-4 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="assets/img/pwa.png" alt="Open Web App" /></a>
-                  <a href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
+                  <a class="me-lg-3 mb-4 mb-lg-0" href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
+                  <a href="https://www.producthunt.com/posts/ai-visionboard?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;visionboard" target="_blank"><img class="app-badge" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464926&theme=light" alt="AI&#0032;VisionBoard - Visualize&#0032;your&#0032;dreams&#0032;with&#0032;AI&#0032;&#0045;&#0032;VisionBoards&#0032;with&#0032;your&#0032;photo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
               </div>
 
             </div>
@@ -146,7 +156,8 @@
             </div>
           </div>
           <div class="d-flex flex-column flex-lg-row align-items-center mb-3">
-                  <a class="me-lg-3 mb-4 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="assets/img/pwa.png" alt="Open Web App" /></a>
+                  <a class="me-lg-3 mb-3 mb-lg-0" href="https://www.producthunt.com/posts/ai-visionboard?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;visionboard" target="_blank"><img class="app-badge" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464926&theme=light" alt="AI&#0032;VisionBoard - Visualize&#0032;your&#0032;dreams&#0032;with&#0032;AI&#0032;&#0045;&#0032;VisionBoards&#0032;with&#0032;your&#0032;photo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+                  <a class="me-lg-3 mb-3 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="assets/img/pwa.png" alt="Open Web App" /></a>
                   <a href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
               </div>
           <!-- <div class="col-xs-12 text-center align-items-center">
@@ -355,9 +366,9 @@
             <div class="container px-5">
                 <div class="text-white-50 small">
                     <div class="mb-2">&copy; AI VisionBoard 2024. All Rights Reserved.</div>
-                    <a href="https://drive.google.com/file/d/1yJCWWpPMcpk7RU3b4FAmnvNZYQrJ3TrQ/view?usp=drive_link">Privacy policy</a>
+                    <a href="./privacy">Privacy policy</a>
                     <span class="mx-1">&middot;</span>
-                    <a href="https://drive.google.com/file/d/1AQ0nx6jMM45jweubnxPNQs7cJEQQrm6C/view?usp=drive_link">Terms & conditions</a>
+                    <a href="./terms">Terms & conditions</a>
                     <span class="mx-1">&middot;</span>
                     <a href="./support/">FAQ</a>
                     <div class="mt-2">

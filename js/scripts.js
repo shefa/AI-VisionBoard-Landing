@@ -10,6 +10,7 @@
 window.addEventListener("DOMContentLoaded", (event) => {
   // Activate Bootstrap scrollspy on the main nav element
   const mainNav = document.body.querySelector("#mainNav");
+  const arrowscroll = document.getElementById("arrowscroll");
   if (mainNav) {
     new bootstrap.ScrollSpy(document.body, {
       target: "#mainNav",
@@ -17,6 +18,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
     window.addEventListener("scroll", (event) => {
       if (window.scrollY > 60) {
+        if (arrowscroll){
+          arrowscroll.classList.remove("active");
+        }
         mainNav.classList.add("navbar-scrolled");
       } else if (window.scrollY < 60) {
         mainNav.classList.remove("navbar-scrolled");
@@ -131,7 +135,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
       swapToNextImage();
       swapLenaAz();
 
-      playVideoForwardReverse(nextVideoElement, videoSources[currentVideoIndex]);
+      //playVideoForwardReverse(nextVideoElement, videoSources[currentVideoIndex]);
+      nextVideoElement.src = videoSources[currentVideoIndex];
+      nextVideoElement.play();
       nextVideoElement.classList.add("active");
       currentVideoElement.classList.remove("active");
       [currentVideoElement, nextVideoElement] = [nextVideoElement, currentVideoElement];
