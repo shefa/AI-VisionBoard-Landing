@@ -26,8 +26,22 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    console.log("google analytics consent iok");
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'wait_for_update': 500
+    });
+    setTimeout(function(){
+      console.log('granted');
+      gtag('consent', 'update', {
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+      });
+    },333);
 
+    gtag('js', new Date());
     gtag('config', 'G-Q6XBMNGPK0');
   </script>
 </head>
@@ -108,9 +122,9 @@
               </div>
 
               <div class="d-flex flex-column flex-lg-row align-items-center">
-                  <a class="me-lg-3 mb-4 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="assets/img/pwa.png" alt="Open Web App" /></a>
-                  <a class="me-lg-3 mb-4 mb-lg-0" href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
-                  <a href="https://www.producthunt.com/posts/ai-visionboard?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;visionboard" target="_blank"><img class="app-badge" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464926&theme=light" alt="AI&#0032;VisionBoard - Visualize&#0032;your&#0032;dreams&#0032;with&#0032;AI&#0032;&#0045;&#0032;VisionBoards&#0032;with&#0032;your&#0032;photo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+                  <a class="pwa onweb me-lg-3 mb-4 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="assets/img/pwa.png" alt="Open Web App" /></a>
+                  <a class="apple onweb me-lg-3 mb-4 mb-lg-0" href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
+                  <a class="producthunt onweb me-lg-3 mb-4 mb-lg-0" href="https://www.producthunt.com/posts/ai-visionboard?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;visionboard" target="_blank"><img class="app-badge" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464926&theme=light" alt="AI&#0032;VisionBoard - Visualize&#0032;your&#0032;dreams&#0032;with&#0032;AI&#0032;&#0045;&#0032;VisionBoards&#0032;with&#0032;your&#0032;photo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
               </div>
 
             </div>
@@ -126,7 +140,7 @@
               <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
                 <div class="screen bg-black animated-vertical">
                   <img class="device-image fadezzz active" id="demo-screen1" decoding="async" src="assets/demo-screen-preload.webp">
-                  <img class="device-image fadezzz" id="demo-screen2" decoding="async" src="assets\visionboard_screenshots\screenshot_visionboard_long2.png">
+                  <img class="device-image fadezzz" id="demo-screen2" decoding="async" src="assets\visionboard_screenshots\screenshot_visionboard_long2.webp">
                 </div>
               </div>
             </div>
@@ -156,9 +170,9 @@
             </div>
           </div>
           <div class="d-flex flex-column flex-lg-row align-items-center mb-3">
-                  <a class="me-lg-3 mb-3 mb-lg-0" href="https://www.producthunt.com/posts/ai-visionboard?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;visionboard" target="_blank"><img class="app-badge" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464926&theme=light" alt="AI&#0032;VisionBoard - Visualize&#0032;your&#0032;dreams&#0032;with&#0032;AI&#0032;&#0045;&#0032;VisionBoards&#0032;with&#0032;your&#0032;photo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-                  <a class="me-lg-3 mb-3 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="assets/img/pwa.png" alt="Open Web App" /></a>
-                  <a href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
+                  <a class="producthunt onmobile me-lg-3 mb-3 mb-lg-0" href="https://www.producthunt.com/posts/ai-visionboard?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;visionboard" target="_blank"><img class="app-badge" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464926&theme=light" alt="AI&#0032;VisionBoard - Visualize&#0032;your&#0032;dreams&#0032;with&#0032;AI&#0032;&#0045;&#0032;VisionBoards&#0032;with&#0032;your&#0032;photo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+                  <a class="pwa onmobile me-lg-3 mb-3 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="assets/img/pwa.png" alt="Open Web App" /></a>
+                  <a class="apple onmobile me-lg-3 mb-3 mb-lg-0" href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
               </div>
           <!-- <div class="col-xs-12 text-center align-items-center">
             <button class="btn btn-primary rounded-pill send-feedback" id="join-waitlist" onclick="location.href='https://app.ai-visionboard.com'">
@@ -254,12 +268,12 @@
                         <!-- Features section device mockup-->
                         <div class="features-device-mockup d-flex justify-content-lg-start justify-content-xs-center">
                             <div class="device-wrapper">
-                                <img id="userAz" class="user-badge fadezzz active" loading="lazy" decoding="async" src="assets/img/az.png" alt="User Badge">
+                                <img id="userAz" class="user-badge fadezzz active" loading="lazy" decoding="async" src="assets/img/az.webp" alt="User Badge">
                                 <img id="userLena" class="user-badge fadezzz" loading="lazy" decoding="async" src="assets/img/lena.png" alt="User Badge">
                                 <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
                                     <div class="screen bg-black animated-vertical">
-                                      <img class="device-image fadezzz active" id="demo-screen3" decoding="async" src="assets\visionboard_screenshots\screenshot_visionboard_long3.png">
-                                      <img class="device-image fadezzz" id="demo-screen4" decoding="async" src="assets\visionboard_screenshots\screenshot_visionboard_long2.png">
+                                      <img class="device-image fadezzz active" id="demo-screen3" decoding="async" src="assets\visionboard_screenshots\screenshot_visionboard_long3.webp">
+                                      <img class="device-image fadezzz" id="demo-screen4" decoding="async" src="assets\visionboard_screenshots\screenshot_visionboard_long2.webp">
                                     </div>
                                 </div>
                             </div>
@@ -287,7 +301,7 @@
                             <div class="device-wrapper">
                                 <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
                                     <div class="screen bg-black animated-vertical">
-                                      <img class="device-image" id="demo-screen3" decoding="async" src="assets\visionboard_screenshots\screenshot_visionboard_long4.png">
+                                      <img class="device-image" id="demo-screen3" decoding="async" src="assets\visionboard_screenshots\screenshot_visionboard_long4.webp">
                                     </div>
                                 </div>
                             </div>

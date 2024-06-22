@@ -69,10 +69,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     let currentVideoIndex = 0;
 
     const screenshotSources = [
-        "assets/visionboard_screenshots/screenshot_visionboard_long1.png",
-        "assets/visionboard_screenshots/screenshot_visionboard_long2.png",
-        "assets/visionboard_screenshots/screenshot_visionboard_long3.png",
-        "assets/visionboard_screenshots/screenshot_visionboard_long4.png"
+        "assets/visionboard_screenshots/screenshot_visionboard_long1.webp",
+        "assets/visionboard_screenshots/screenshot_visionboard_long2.webp",
+        "assets/visionboard_screenshots/screenshot_visionboard_long3.webp",
+        "assets/visionboard_screenshots/screenshot_visionboard_long4.webp"
     ];
     let currentScreenshotIndex = 0;
 
