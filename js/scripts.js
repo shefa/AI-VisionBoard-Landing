@@ -30,10 +30,25 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Get references to the video elements
     const video1 = document.getElementById("fade");
 
+    const baseURL = "https://ai-visionboard.com/";
+
+    var readyToPlay = true;
+
     // Function to play both videos simultaneously
     function playVideos() {
       //video1.play();
       //video2.play();
+      
+      // let xhr = new XMLHttpRequest();
+      // xhr.onload = function(){
+      //   nextVideoElement.src = URL.createObjectURL(xhr.response);
+      //   nextVideoElement.play();
+      // };
+
+      // xhr.open("GET", baseURL + videoSources[currentVideoIndex]);
+
+      // xhr.responseType = "blob";
+      // xhr.send();
 
       playNextVideo();
     }
@@ -82,10 +97,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
     let currentDemoScreenshot = demoElements[0];
     let nextDemoScreenshot = demoElements[1];
 
-    function preloadNextVideo() {
-        const preloadIndex = (currentVideoIndex + 1) % videoSources.length;
-        const preloadVideoElement = new Image();
-        preloadVideoElement.src = videoSources[preloadIndex];
+    function preloadNextVideo(videoElement, videoIndex) {
+      let xhr = new XMLHttpRequest();
+      xhr.onload = function(){
+        console.log("setting src " + videoElement.id);
+        videoElement.src = URL.createObjectURL(xhr.response);
+
+        console.log("playing next " + videoElement.id);
+        videoElement.play();
+        setTimeout(() => {
+          videoElement.pause();
+        }, 100);
+        console.log("paused " + videoElement.id);
+      };
+
+      xhr.open("GET", baseURL + videoSources[videoIndex]);
+
+      xhr.responseType = "blob";
+      xhr.send();
     }
 
     function playVideoForwardReverse(videoElement, source) {
@@ -136,14 +165,39 @@ window.addEventListener("DOMContentLoaded", (event) => {
       swapLenaAz();
 
       //playVideoForwardReverse(nextVideoElement, videoSources[currentVideoIndex]);
-      nextVideoElement.src = videoSources[currentVideoIndex];
-      nextVideoElement.play();
-      nextVideoElement.classList.add("active");
-      currentVideoElement.classList.remove("active");
-      [currentVideoElement, nextVideoElement] = [nextVideoElement, currentVideoElement];
-      currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
       
-      preloadNextVideo();
+      
+      if(readyToPlay) {
+        [currentVideoElement, nextVideoElement] = [nextVideoElement, currentVideoElement];
+        currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+
+        console.log("playing " + currentVideoElement.id);
+        
+        currentVideoElement.play();
+        nextVideoElement.classList.remove("active");
+        // setTimeout(() => {
+        //   nextVideoElement.classList.add("preload-hack");
+        // }, 2000);
+
+        currentVideoElement.classList.add("active");
+        // currentVideoElement.classList.remove("preload-hack");
+        
+        readyToPlay = false;
+
+        setTimeout(() => {
+          nextVideoElement.src = videoSources[currentVideoIndex];
+          // preloadNextVideo(nextVideoElement, currentVideoIndex);
+
+          nextVideoElement.addEventListener('loadeddata', () => {
+            readyToPlay = true;
+
+            nextVideoElement.currentTime = 0.1;
+            nextVideoElement.pause();
+            console.log('Video preloaded ' + videoSources[currentVideoIndex]);
+          });
+        nextVideoElement.load();}, 2000);
+      }
+
       setTimeout(playNextVideo, 8000);  // Schedule next video change
     }
 
