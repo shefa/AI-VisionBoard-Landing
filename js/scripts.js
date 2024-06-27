@@ -76,10 +76,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
     const videoSources = [
-        "assets/background/0.mp4",
-        "assets/background/1.mp4",
-        "assets/background/2.mp4",
-        "assets/background/3.mp4"
+        "assets/background/2pass-avg/0-3m-avg.webm",
+        "assets/background/2pass-avg/1-5m-avg.webm",
+        "assets/background/2pass-avg/2-5m-avg.webm",
+        "assets/background/2pass-avg/3-6m-avg.webm"
     ];
     let currentVideoIndex = 0;
 
