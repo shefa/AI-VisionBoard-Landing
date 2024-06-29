@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Join the AI Vision Board community and turn your dreams into visually captivating realities. Generate AI-created images of your goals, explore popular dreams, and connect with like-minded dreamers. With personalized dream experiences and an AI Life Coach, create your world by dreaming bigger today!" />
+  <meta name="author" content="" />
+  <title>AI VisionBoard</title>
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.webp" />
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="../css/styles.css" rel="stylesheet" />
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6XBMNGPK0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    console.log("google analytics consent iok");
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'wait_for_update': 500
+    });
+    setTimeout(function(){
+      console.log('granted');
+      gtag('consent', 'update', {
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+      });
+    },333);
+
+    gtag('js', new Date());
+    gtag('config', 'G-Q6XBMNGPK0');
+  </script>
+</head>
+
+<body id="page-top">
+  <div class="background-kur">
+    <video loop muted playsinline defaultmuted preload="auto" class="fadezzz" id="fade" poster="../assets/fade-preload.webp">
+      <source src="../assets/background/0.mp4" type="video/mp4">
+    </video>
+    <video loop muted playsinline defaultmuted preload="auto" class="fadezzz active" id="fade2" poster="../assets/fade-preload.webp">
+      <source src="../assets/background/0.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+    <div class="top-elipse"></div>
+  </div>
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container px-5">
+      <a class="navbar-brand fw-bold" href="#page-top">
+        <dotlottie-player src="https://lottie.host/28216d38-0a6f-489d-89ef-f60d6a35cadc/92WzTOS5Jp.json"
+          background="transparent" speed="2" style="width: 200px; height: 50px" direction="1" playMode="normal" loop
+          autoplay></dotlottie-player>
+      </a>
+      <div class="" id="navbarResponsive">
+        <!-- <a href="https://www.producthunt.com/posts/elevate-pay?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-elevate-pay" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=462079&amp;theme=light" alt="Elevate Pay - The bank for remote professionals and freelancers | Product Hunt" style="width: 204px; height: 44px;" height="3em"></a> -->
+        <button class="btn btn-primary rounded-pill send-feedback mb-2 mb-lg-0" id="send-feedback" onclick="location.href='https://app.ai-visionboard.com'">
+          <span class="d-flex px-3 align-items-center" style="padding-right:0.5em !important;">
+            <span class="small">Launch App</span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--carbon" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="
+    height: 1em;
+    width: 1em;
+    margin-left: 0.5em;
+"><path fill="currentColor" d="m18 6l-1.43 1.393L24.15 15H4v2h20.15l-7.58 7.573L18 26l10-10z"></path></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="arrowscroll" class="arrow-wrapper fadezzz active">
+    <div class="arrow d-flex float-right">
+      <svg xmlns="http://www.w3.org/2000/svg" class="arrow-pulse" width="1em" height="1em" viewBox="0 0 25 25">
+        <path fill="#DADADA" d="M4.97 13.22a.75.75 0 0 1 1.06 0L11 18.19V3.75a.75.75 0 0 1 1.5 0v14.44l4.97-4.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734l-6.25 6.25a.75.75 0 0 1-1.06 0l-6.25-6.25a.75.75 0 0 1 0-1.06Z"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Mashead header-->
+  <header class="masthead gradient-thing22">
+
+    <div class="container px-5 pb-5">
+
+      <div class="main-container row gx-5 align-items-center">
+        <div class="col-lg-6">
+          <!-- Mashead text and app badges-->
+          <div class="create-your-world-now-container mb-5 mb-lg-0 text-center text-lg-start">
+            <h1 class="create-your-world-h1 lh-1 mb-3">
+              <span id="h1-create">CREATE</span> 
+              <span id="h1-your">YOUR</span>
+              <span id="h1-world">WORLD</span>
+              <span id="h1-now">NOW</span>
+            </h1>
+
+            <div class="d-none d-sm-block">
+              <div class="Vector2" style="width: 100%; height: 0px; border: 1px rgba(28, 227, 229, 0.20) solid"></div>
+             
+
+              <div class="see-your-dreams-container">
+                <div class="see-your-dreams-title">See your dreams come to life</div>
+                <ul class="see-your-dreams-ul">
+                  <li>Visualise Your Dreams in Seconds</li>
+                  <li>Create Personalized Vision Board</li>
+                </ul>
+                <ul class="see-your-dreams-ul">
+                  <li>See Yourself in Your Dreams</li>
+                  <li>Explore Community Shared Dreams</li>
+                </ul>
+              </div>
+
+              <div class="d-flex flex-column flex-lg-row align-items-center">
+                  <a class="pwa onweb me-lg-3 mb-4 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="../assets/img/pwa.png" alt="Open Web App" /></a>
+                  <a class="apple onweb me-lg-3 mb-4 mb-lg-0" href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="../assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
+                  <!-- <a class="producthunt onweb me-lg-3 mb-4 mb-lg-0" href="https://www.producthunt.com/posts/ai-visionboard?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;visionboard" target="_blank"><img class="app-badge" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464926&theme=light" alt="AI&#0032;VisionBoard - Visualize&#0032;your&#0032;dreams&#0032;with&#0032;AI&#0032;&#0045;&#0032;VisionBoards&#0032;with&#0032;your&#0032;photo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a> -->
+              </div>
+
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-lg-6 pb-5 phone-mockup-thing">
+          <!-- Masthead device mockup feature-->
+          <div class="masthead-device-mockup">
+            <div class="device-wrapper">
+              <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                <div class="screen bg-black animated-vertical">
+                  <img class="device-image fadezzz active" id="demo-screen1" decoding="async" src="../assets/demo-screen-preload.webp">
+                  <img class="device-image fadezzz" id="demo-screen2" decoding="async" src="../assets/visionboard_screenshots/screenshot_visionboard_long2.webp">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+
+        <div class="only-on-mobile">
+          <div class="col-lg-6">
+            <!-- Masthead device mockup feature-->
+            <div class="d-none create-your-world-now-container mb-3 mb-lg-0 text-center text-lg-start">
+              <div class="Vector2" style="width: 100%;height: 0px;border: 1px rgb(28 227 229 / 30%) solid;margin-bottom: 3px;z-index: 5;position: relative;"></div>
+              <div class="see-your-dreams-container">
+                <div class="see-your-dreams-title">See your dreams come to life</div>
+                <ul class="see-your-dreams-ul">
+                  <li>Visualise Your Dreams in Seconds</li>
+                  <li>Create Personalized Vision Board</li>
+                </ul>
+                <ul class="see-your-dreams-ul">
+                  <li>See Yourself in Your Dreams</li>
+                  <li>Explore Community Shared Dreams</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-lg-row align-items-center mb-3">
+                  <!-- <a class="producthunt onmobile me-lg-3 mb-3 mb-lg-0" href="https://www.producthunt.com/posts/ai-visionboard?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;visionboard" target="_blank"><img class="app-badge" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464926&theme=light" alt="AI&#0032;VisionBoard - Visualize&#0032;your&#0032;dreams&#0032;with&#0032;AI&#0032;&#0045;&#0032;VisionBoards&#0032;with&#0032;your&#0032;photo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a> -->
+                  <a class="pwa onmobile me-lg-3 mb-3 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="../assets/img/pwa.png" alt="Open Web App" /></a>
+                  <a class="apple onmobile me-lg-3 mb-3 mb-lg-0" href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="../assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
+              </div>
+          <!-- <div class="col-xs-12 text-center align-items-center">
+            <button class="btn btn-primary rounded-pill send-feedback" id="join-waitlist" onclick="location.href='https://app.ai-visionboard.com'">
+              <span class="d-flex align-items-center">
+                <span class="small">Launch app</span>
+              </span>
+              <img src="assets/arrow-right.svg" alt="up-right diagonal arrow">
+            </button>
+          </div> -->
+
+
+        </div>
+
+        
+
+    </div>
+  </header>
+
+        <!-- <aside class="text-center gradient-thing">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="h3 fs-3 text-white mb-4">Join over 2,000,000 dreamers using our cutting-edge generative AI model.</div>
+                        <a href="https://www.producthunt.com/posts/onepublish?embed=true&amp;utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-onepublish" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=461600&amp;theme=neutral&amp;period=daily" alt="OnePublish - Notion-based cross-publishing tool | Product Hunt" style="height: 3rem; max-width: 12rem;"></a>
+                        
+                        <a href="https://replicate.com/shefa/turbo-enigma"><img  src="assets/img/replicate.svg" alt="Turbo Enigma model on Replicate" style="height: 3rem;border: solid white;border-radius: 1em;padding: 5px;max-width: 12em;" /></a>
+                    </div>
+                </div>
+            </div>
+        </aside> -->
+
+<!-- break -->
+<!-- Basic features section-->
+        <!-- <section class="gradient-thing">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-12 col-lg-5">
+                        <h2 class="display-4 lh-1 mb-4 now-h1">Join the AI Vision Board Community Today!</h2>
+                        <p class="lead fw-normal text-muted mb-5 mb-lg-0">Whether you're Dreaming Big or looking for that Spark of Inspiration, AI Vision Board is here to turn your dreams into visually captivating realities and inspire you to Create Your World by Dreaming Bigger.
+                        <br/><br/>
+                        Join  the community of dreamers today!
+                        </p>
+                    </div>
+                    <div class="col-sm-8 col-md-4 pt-4">
+                        <div class="px-5 px-sm-0">
+                          <a href="https://instagram.com/ai_visionboard"><img class="img-fluid rounded-circle"  loading="lazy" decoding="async" src="assets/screenshots/collage.webp" alt="AI VisionBoard Community" /></a></div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+
+  <!-- Features -->
+          <section id="features" class="gradient-thing-reversed">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                  <div class="create-your-world-now-container mb-5 text-center text-lg-start">
+                    <h2 class="display-4 lh-1 mb-4 now-h1">How it works</h2>
+                  </div>
+
+                    <!-- 4th feature -->
+                    <div class="col-lg-4 mb-2 mt-5 py-lg-5">
+                        <!-- Features section device mockup-->
+                        <div class="features-device-mockup d-flex justify-content-lg-start justify-content-xs-center">
+                            <div class="device-wrapper">
+                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                                    <div class="screen bg-black">
+                                        <video loop muted playsinline defaultmuted autoplay preload="auto" style="max-width: 100%; height: 100%;" poster="../assets/demo-screen-preload.webp">
+                                          <source src="../assets/demo_bali_rice_fields.mp4" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mb-5">
+                        <div class="container-fluid px-5 py-5">
+                            <div class="row gx-5">
+                                    <div class="text-center">
+                                        <!-- <i class="bi-phone icon-feature text-gradient d-block mb-3"></i> -->
+                                        <h3 class="font-alt now-h1">Visualise Your Dreams in Seconds</h3>
+                                        <p class="lead fw-normal text-muted mb-0">Type your dream to visualize it in just 3 seconds!</p>
+                                        <p class="lead fw-normal text-muted mb-0">Not sure where to start? Click on one of the 1000+ random prompt ideas!</p>                                     
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- 1st feature -->
+                    <div class="col-lg-4 mb-2 mt-5 py-lg-5">
+                        <!-- Features section device mockup-->
+                        <div class="features-device-mockup d-flex justify-content-lg-start justify-content-xs-center">
+                            <div class="device-wrapper">
+                                <img id="userAz" class="user-badge fadezzz active" loading="lazy" decoding="async" src="../assets/img/az.webp" alt="User Badge">
+                                <img id="userLena" class="user-badge fadezzz" loading="lazy" decoding="async" src="../assets/img/lena.png" alt="User Badge">
+                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                                    <div class="screen bg-black animated-vertical">
+                                      <img class="device-image fadezzz active" id="demo-screen3" decoding="async" src="../assets/visionboard_screenshots/screenshot_visionboard_long3.webp">
+                                      <img class="device-image fadezzz" id="demo-screen4" decoding="async" src="../assets/visionboard_screenshots/screenshot_visionboard_long2.webp">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mb-5">
+                        <div class="container-fluid px-5 py-5">
+                            <div class="row gx-5">
+                                    <div class="text-center">
+                                        <!-- <i class="bi-phone icon-feature text-gradient d-block mb-3"></i> -->
+                                        <h3 class="font-alt now-h1">Visualize Yourself in Your Dreams</h3>
+                                        <p class="lead fw-normal text-muted mb-0">Add your photo and type " I am..." or "Me, ..." to see yourself in your dream.</p>
+                                        <p class="lead fw-normal text-muted mb-0">For example, "I am an astronaut", "Me as a chef" ...</p>
+                                        <!-- <p class="lead fw-normal text-muted mb-0">Type ‘ I am [type your dream]’ to make your dreaming experience even more personalised :-) Enjoy the wonders of the World from your home!</p>  -->
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 2nd feature -->
+                    <div class="col-lg-4 mb-2 mt-5 py-lg-5">
+                        <!-- Features section device mockup-->
+                        <div class="features-device-mockup d-flex justify-content-lg-start justify-content-xs-center">
+                            <div class="device-wrapper">
+                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                                    <div class="screen bg-black animated-vertical">
+                                      <img class="device-image" id="demo-screen3" decoding="async" src="../assets/visionboard_screenshots/screenshot_visionboard_long4.webp">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mb-5">
+                        <div class="container-fluid px-5 py-5">
+                            <div class="row gx-5">
+                                    <div class="text-center">
+                                        <!-- <i class="bi-phone icon-feature text-gradient d-block mb-3"></i> -->
+                                        <h3 class="font-alt now-h1">Dream community</h3>
+                                        <p class="lead fw-normal text-muted mb-0">Explore the dreams of others, popular or latest dreams, and find inspiration for your own vision board.</p>
+                                        <p class="lead fw-normal text-muted mb-0">Share your vision board creations with the world and connect with a community of dreamers who are passionate about turning aspirations into reality.</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 3rd feature -->
+                    <div class="col-lg-4 mb-2 mt-5 py-lg-5">
+                        <!-- Features section device mockup-->
+                        <div class="features-device-mockup d-flex justify-content-lg-start justify-content-xs-center">
+                            <div class="device-wrapper">
+                                <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
+                                    <div class="screen bg-black">
+                                        <img class="device-image" loading="lazy" decoding="async" src="../assets/screenshots/3.webp" alt="Screenshot of a chat between user and AI Life coach">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mb-5">
+                        <div class="container-fluid px-5 pt-5">
+                            <div class="row gx-5">
+                                    <div class="text-center">
+                                        <!-- <i class="bi-phone icon-feature text-gradient d-block mb-3"></i> -->
+                                        <h3 class="font-alt now-h1">AI Life Coach - chat</h3>
+                                        <p class="lead fw-normal text-muted mb-0">The AI Life Coach is your 24/7 companion for all things personal growth and well-being.</p>
+                                        <p class="lead fw-normal text-muted mb-0">It's like having a supportive friend, available anywhere anytime.</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- App badge section-->
+        <section class="gradient-thing pt-0" id="download">
+            <div class="container px-5">
+                <h2 class="text-center text-white font-alt mb-4">Get the app now!</h2>
+                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <a class="me-lg-3 mb-4 mb-lg-0" href="https://app.ai-visionboard.com/"><img class="app-badge" src="../assets/img/pwa.png" alt="Open Web App" /></a>
+                    <a href="https://apps.apple.com/us/app/ai-visionboard-dream-inspire/id6477440649"><img class="app-badge" src="../assets/img/app-store-badge.svg" alt="Download app on Apple App Store" /></a>
+                </div>
+            </div>
+        </section>
+       <!--  <section class="gradient-thing pt-0" id="download">
+            <div class="container px-5">
+                <h2 class="text-center text-white font-alt mb-5">Alpha version of the web app is live!</h2>
+                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <button class="btn btn-primary rounded-pill send-feedback" id="join-waitlist" onclick="location.href='http://app.ai-visionboard.com'">
+                      <span class="d-flex align-items-center">
+                        <span class="small">Launch app</span>
+                      </span>
+                      <img src="assets/arrow-right.svg" alt="up-right diagonal arrow">
+                    </button>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Footer-->
+        <footer class="text-center py-5 navbar-scrolled">
+            <div class="container px-5">
+                <div class="text-white-50 small">
+                    <div class="mb-2">&copy; AI VisionBoard 2024. All Rights Reserved.</div>
+                    <a href="./privacy">Privacy policy</a>
+                    <span class="mx-1">&middot;</span>
+                    <a href="./terms">Terms & conditions</a>
+                    <span class="mx-1">&middot;</span>
+                    <a href="./support/">FAQ</a>
+                    <div class="mt-2">
+                    <a href="https://instagram.com/ai_visionboard" role="button" aria-label="Instagram Page"><i class="bi bi-instagram"></i></a>
+                    <span class="mx-1">&middot;</span>
+                    <a href="https://twitter.com/ai_visionboard" role="button" aria-label="Twitter Page"><i class="bi bi-twitter"></i></a>
+                    <span class="mx-1">&middot;</span>
+                    <a href="https://www.youtube.com/@ai_visionboard" role="button" aria-label="Youtube Channel"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+  <!-- Feedback Modal-->
+        <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                        <h2 class="modal-title font-alt text-white" id="feedbackModalLabel">Join Waitlist</h2>
+                    </div>
+                    <div class="modal-body border-0 p-4">
+                        <form id="contactForm" name="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf9c-9dgTGFyNtUH9TbzXKkJhVFB166t432bwIQZBpXKXj_Fw/formResponse?" target="hidden_iframe" onsubmit="return showSuccessMessage()">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="entry.858045698" id="entry.858045698" type="text"/>
+                                <label for="entry.858045698">Name</label>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="entry.2031845037" id="entry.2031845037" type="email" data-sb-validations="required,email" />
+                                <label for="entry.2031845037">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Added to the waitlist!</div>
+                                </div>
+                            </div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary rounded-pill btn-lg" id="submitButton" type="submit">Submit</button></div>
+                        </form>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="scripts.js"></script>
+  <script>
+    function showSuccessMessage() {
+        document.getElementById('submitSuccessMessage').className='';
+        document.getElementById('submitButton').className='btn btn-primary rounded-pill btn-lg disabled';
+        return true; 
+    }
+  </script>
+</body>
+
+</html>
